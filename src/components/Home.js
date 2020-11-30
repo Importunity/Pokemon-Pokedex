@@ -65,7 +65,7 @@ function Home(props){
                 {searchValue !== undefined? 
                     searchValue.slice(values.minValue, values.maxValue).map((card, index) => {
                         return(
-                            <div key={index} onClick={() => currentViewClick(index)} className="mb-2">
+                            <div key={index} onClick={() => currentViewClick(values.minValue + index)} className="mb-2">
                                 <Card  hoverable cover={<img alt={card.name} src={card.imageUrlHiRes}/>}>
                                 </Card>
                             </div>
